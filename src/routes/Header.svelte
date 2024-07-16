@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+	import gitbook from '$lib/images/gitbook.svg';
 </script>
 
 <header>
@@ -13,7 +13,6 @@
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -22,18 +21,21 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+			<li aria-current={$page.url.pathname.startsWith('/docs') ? 'page' : undefined}>
+				<a href="/docs">Docs</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/team' ? 'page' : undefined}>
+				<a href="/team">Team</a>
+			</li>
+			<li>
+				<a href="https://instagram.com" target="_blank">Apply</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
 
 	<div class="corner">
 		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+			<img src={gitbook} alt="GitBook" />
 		</a>
 	</div>
 </header>
@@ -88,39 +90,33 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
 		background-size: contain;
 	}
-
 	li {
 		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
 		display: flex;
-		height: 100%;
 		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
+		padding: 0.25em 0.75em; 
 		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0em;
 		text-decoration: none;
-		transition: color 0.2s linear;
+		margin: 0 5px;
+		background-color: white;
+		border: 1px solid black;
+	}
+
+	li[aria-current='page'] {
+		background-color: black; 
+		color: white;
+	}
+
+	li[aria-current='page'] a {
+		color: white; 
+	}
+
+	a {
+		text-decoration: none;
+		color: black; 
 	}
 
 	a:hover {

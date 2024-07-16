@@ -1,5 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -10,23 +9,37 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
+	<h1 style="font-size: 1.5rem;">
+		<span style="color: var(--color-theme-1);">Fight On </span><span
+			style="color: var(--color-theme-2);">Founders</span
+		>
 	</h1>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+	<h2 style="text-align: left; width: 60%;">
+		<strong>FightOnFounders</strong> is an event series hosted in LA. We're an arm extended from
+		<a href="https://iovineyoung.usc.edu/">Dr. Dre and Jimmy Iovine's Iovine and Young Academy</a>
+		and partial to the Innovation Quest.
+		<br /><br />
+		Our mission is to promote and evangelize the practice of entrepreneurship among students, alumni,
+		and industry professionals, as well as equip the current USC entrepreneurship ecosystem with a comprehensive
+		understanding of a prospective investor’s perspective.
 	</h2>
-
-	<Counter />
 </section>
+<h1 style="text-align: center; font-size: 1.5rem; padding-top: 50px;">
+	RSVP for Fall 2024
+</h1>
+<div class="luma">
+	<iframe
+		src="https://lu.ma/embed/calendar/cal-xUeq1gewckw1XYR/events?"
+		width="600"
+		height="450"
+		frameborder="0"
+		style="border: 1px solid #bfcbda88; border-radius: 4px;"
+		allowfullscreen=""
+		aria-hidden="false"
+		tabindex="0">
+	</iframe>
+</div>
 
 <style>
 	section {
@@ -41,19 +54,11 @@
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
+	.luma {
 		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 20px;
 	}
 </style>
