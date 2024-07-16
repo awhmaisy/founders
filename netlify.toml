@@ -1,6 +1,6 @@
-   [build]
-     command = "pnpm run build"
-     publish = "build"
+[build]
+  command = "svelte-kit build"
+  publish = "/opt/build/repo/build"
 
    [[redirects]]
      from = "/*"
