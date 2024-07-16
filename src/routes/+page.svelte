@@ -29,13 +29,15 @@
 	RSVP for Fall 2024
 </h1>
 <div class="luma">
+	<!-- svelte-ignore a11y-missing-attribute -->
+	<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 	<iframe
 		src="https://lu.ma/embed/calendar/cal-xUeq1gewckw1XYR/events?"
 		width="600"
 		height="450"
 		frameborder="0"
 		style="border: 1px solid #bfcbda88; border-radius: 4px;"
-		allowfullscreen=""
+		allowfullscreen="true"
 		aria-hidden="false"
 		tabindex="0">
 	</iframe>
