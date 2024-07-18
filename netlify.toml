@@ -1,6 +1,7 @@
 [build]
   command = "svelte-kit build"
   publish = "/opt/build/repo/build"
+  build = "npm run build"
 
    [[redirects]]
      from = "/*"
