@@ -1,8 +1,6 @@
 [build]
   command = "svelte-kit build"
   publish = "/opt/build/repo/build"
-  commandOrigin: config
-  publishOrigin: config
 
    [[redirects]]
      from = "/*"

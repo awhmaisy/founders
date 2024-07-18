@@ -23,13 +23,13 @@ importers:
         version: 1.40.1
       '@sveltejs/adapter-netlify':
         specifier: ^4.3.1
-        version: 4.3.1(@sveltejs/kit@1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))
+        version: 4.3.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))
       '@sveltejs/adapter-vercel':
         specifier: ^3.1.0
-        version: 3.1.0(@sveltejs/kit@1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))
+        version: 3.1.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))
       '@sveltejs/kit':
-        specifier: ^1.30.3
-        version: 1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
+        specifier: ^2.4.0
+        version: 2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
       '@types/cookie':
         specifier: ^0.5.4
         version: 0.5.4
@@ -446,8 +446,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@polka/url@1.0.0-next.21':
-    resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
+  '@polka/url@1.0.0-next.25':
+    resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
 
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -466,13 +466,14 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
 
-  '@sveltejs/kit@1.30.3':
-    resolution: {integrity: sha512-0DzVXfU4h+tChFvoc8C61IqErCyskD4ydSIDjpKS2lYlEzIYrtYrY7juSqACFxqcvZAnOEXvSY+zZ8br0+ZMMg==}
-    engines: {node: ^16.14 || >=18}
+  '@sveltejs/kit@2.5.18':
+    resolution: {integrity: sha512-+g06hvpVAnH7b4CDjhnTDgFWBKBiQJpuSmQeGYOuzbO3SC3tdYjRNlDCrafvDtKbGiT2uxY5Dn9qdEUGVZdWOQ==}
+    engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
-      svelte: ^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.0
-      vite: ^4.0.0
+      '@sveltejs/vite-plugin-svelte': ^3.0.0
+      svelte: ^4.0.0 || ^5.0.0-next.0
+      vite: ^5.0.3
 
   '@sveltejs/vite-plugin-svelte-inspector@1.0.4':
     resolution: {integrity: sha512-zjiuZ3yydBtwpF3bj0kQNV0YXe+iKE545QGZVTaylW3eAzFr+pJ/cwK8lZEaRp4JtaJXhD5DyWAV4AxLh6DgaQ==}
@@ -516,6 +517,9 @@ packages:
 
   '@types/cookie@0.5.4':
     resolution: {integrity: sha512-7z/eR6O859gyWIAjuvBWFzNURmf2oPBmJlfVWkwehU5nzIyjwBsTh7WMmEEV4JFnHuQ3ex4oyTvfKzcyJVDBNA==}
+
+  '@types/cookie@0.6.0':
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -761,8 +765,8 @@ packages:
     resolution: {integrity: sha512-7V+KqSvMiHp8yWDuwfww06XleMWVVB9b9tURBx+G7UTADuo5hYPuowKloz4OzOqbPezxgo+fdQ1522WzPG4OeA==}
     engines: {node: '>=8'}
 
-  cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+  cookie@0.6.0:
+    resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
   create-require@1.1.1:
@@ -821,8 +825,8 @@ packages:
     resolution: {integrity: sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==}
     engines: {node: '>=8'}
 
-  devalue@4.3.2:
-    resolution: {integrity: sha512-KqFl6pOgOW+Y6wJgu80rHpo2/3H07vr8ntR9rkkFIRETewbf5GaYYcakYfiKz89K+sLsuPkQIZaXDMjUObZwWg==}
+  devalue@5.0.0:
+    resolution: {integrity: sha512-gO+/OMXF7488D+u3ue+G7Y4AA3ZmUnB3eHJXmBTgNHvr4ZNzl36A0ZtG+XCRNYCkYx/bFmw4qtkoFLa+wSrwAA==}
 
   diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
@@ -1222,6 +1226,9 @@ packages:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
 
+  import-meta-resolve@4.1.0:
+    resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
+
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
@@ -1325,10 +1332,6 @@ packages:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
 
-  magic-string@0.30.0:
-    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
-    engines: {node: '>=12'}
-
   magic-string@0.30.5:
     resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
     engines: {node: '>=12'}
@@ -1401,8 +1404,8 @@ packages:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
 
-  mrmime@1.0.1:
-    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
+  mrmime@2.0.0:
+    resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
     engines: {node: '>=10'}
 
   ms@2.1.1:
@@ -1739,8 +1742,8 @@ packages:
     resolution: {integrity: sha512-MY2/qGx4enyjprQnFaZsHib3Yadh3IXyV2C321GY0pjGfVBu4un0uDJkwgdxqO+Rdx8JMT8IfJIRwbYVz3Ob3Q==}
     engines: {node: '>=14'}
 
-  sirv@2.0.3:
-    resolution: {integrity: sha512-O9jm9BsID1P+0HOi81VpXPoDxYP374pkOLzACAoyUQ/3OUVndNpsz6wMnY2z+yOxzbllCKZrM+9QrWsv4THnyA==}
+  sirv@2.0.4:
+    resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
 
   sorcery@0.11.0:
@@ -1952,10 +1955,6 @@ packages:
 
   uid-promise@1.0.0:
     resolution: {integrity: sha512-R8375j0qwXyIu/7R0tjdF06/sElHqbmdmWC9M2qQHpEVbvE4I5+38KJI7LUUmQMp7NVq4tKHiBMkT0NFM453Ig==}
-
-  undici@5.26.5:
-    resolution: {integrity: sha512-cSb4bPFd5qgR7qr2jYAi0hlX9n5YKK2ONKkLFkxl+v/9BvC0sOpZjBHDBSXc5lWAf5ty9oZdRXytBIHzgUcerw==}
-    engines: {node: '>=14.0'}
 
   undici@5.28.4:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
@@ -2355,7 +2354,7 @@ snapshots:
     dependencies:
       playwright: 1.40.1
 
-  '@polka/url@1.0.0-next.21': {}
+  '@polka/url@1.0.0-next.25': {}
 
   '@rollup/pluginutils@4.2.1':
     dependencies:
@@ -2364,41 +2363,39 @@ snapshots:
 
   '@sinclair/typebox@0.25.24': {}
 
-  '@sveltejs/adapter-netlify@4.3.1(@sveltejs/kit@1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))':
+  '@sveltejs/adapter-netlify@4.3.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))':
     dependencies:
       '@iarna/toml': 2.2.5
-      '@sveltejs/kit': 1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
+      '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
       esbuild: 0.21.5
       set-cookie-parser: 2.6.0
 
-  '@sveltejs/adapter-vercel@3.1.0(@sveltejs/kit@1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))':
+  '@sveltejs/adapter-vercel@3.1.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))':
     dependencies:
-      '@sveltejs/kit': 1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
+      '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
       '@vercel/nft': 0.24.4
       esbuild: 0.18.20
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@sveltejs/kit@1.30.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))':
+  '@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))
-      '@types/cookie': 0.5.4
-      cookie: 0.5.0
-      devalue: 4.3.2
+      '@types/cookie': 0.6.0
+      cookie: 0.6.0
+      devalue: 5.0.0
       esm-env: 1.0.0
+      import-meta-resolve: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.0
-      mrmime: 1.0.1
+      magic-string: 0.30.5
+      mrmime: 2.0.0
       sade: 1.8.1
       set-cookie-parser: 2.6.0
-      sirv: 2.0.3
+      sirv: 2.0.4
       svelte: 3.59.2
       tiny-glob: 0.2.9
-      undici: 5.26.5
       vite: 4.5.1(@types/node@16.18.11)
-    transitivePeerDependencies:
-      - supports-color
 
   '@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.5.3(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11)))(svelte@3.59.2)(vite@4.5.1(@types/node@16.18.11))':
     dependencies:
@@ -2447,6 +2444,8 @@ snapshots:
   '@types/chai@4.3.5': {}
 
   '@types/cookie@0.5.4': {}
+
+  '@types/cookie@0.6.0': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -2782,7 +2781,7 @@ snapshots:
 
   convert-hrtime@3.0.0: {}
 
-  cookie@0.5.0: {}
+  cookie@0.6.0: {}
 
   create-require@1.1.1: {}
 
@@ -2818,7 +2817,7 @@ snapshots:
 
   detect-libc@2.0.1: {}
 
-  devalue@4.3.2: {}
+  devalue@5.0.0: {}
 
   diff@4.0.2: {}
 
@@ -3277,6 +3276,8 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
+  import-meta-resolve@4.1.0: {}
+
   imurmurhash@0.1.4: {}
 
   inflight@1.0.6:
@@ -3362,10 +3363,6 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  magic-string@0.30.0:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-
   magic-string@0.30.5:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -3429,7 +3426,7 @@ snapshots:
 
   mri@1.2.0: {}
 
-  mrmime@1.0.1: {}
+  mrmime@2.0.0: {}
 
   ms@2.1.1: {}
 
@@ -3699,10 +3696,10 @@ snapshots:
 
   signal-exit@4.0.2: {}
 
-  sirv@2.0.3:
+  sirv@2.0.4:
     dependencies:
-      '@polka/url': 1.0.0-next.21
-      mrmime: 1.0.1
+      '@polka/url': 1.0.0-next.25
+      mrmime: 2.0.0
       totalist: 3.0.1
 
   sorcery@0.11.0:
@@ -3916,10 +3913,6 @@ snapshots:
   typescript@5.3.3: {}
 
   uid-promise@1.0.0: {}
-
-  undici@5.26.5:
-    dependencies:
-      '@fastify/busboy': 2.1.0
 
   undici@5.28.4:
     dependencies:
