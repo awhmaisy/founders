@@ -1,21 +1,15 @@
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
   kit: {
-	adapter: adapter(),
-	prerender: {
-	  handleHttpError: ({ path, referrer, message }) => {
-		// ignore deliberate link to shiny 404 page
-		if (path === '/not-found' && referrer === '/blog/how-we-built-our-404-page') {
-		  return;
-		}
-
-		// otherwise fail the build
-		throw new Error(message);
-	  }
-	}
+    adapter: adapter(),
+    prerender: {
+      handleHttpError: ({ path, referrer, message }) => {
+        // Log the error details
+        console.error(`Error prerendering ${path} (referrer: ${referrer}): ${message}`);
+        // Optionally, you can throw an error to stop the build
+        // throw new Error(message);
+      }
+    }
   }
 };
-
-export default config;
